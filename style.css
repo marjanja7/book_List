@@ -6,13 +6,13 @@
     padding-bottom: 6rem;
 }
 .middle{
-    width: 1248px;
+    max-width: 1248px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
 }
 .hat {
-    justify-content: space-between;
-    display: flex;
+    
     text-align: center
     
 }
@@ -25,7 +25,6 @@ h1 {
 .bookList {
     width: auto;
     background-color: rgba(234, 254, 253, 0.955);
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,18 +34,19 @@ h1 {
 
 .containerBook{
     background-color: hwb(206 97% 0%);
-    border: 2px solid rgb(215, 218, 218);
-    
-    width: 294px;
-    height: 320px;
+    border: 2px solid rgb(215, 218, 218);    
+    width: 210px;
+    height: 400px;
     display: block;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
     margin-top: 20px;
     border-radius: 10px;
     text-align: center;
-    font-size:15px;
+    font-size:13px;
+
+    
 }
-h2{ font-size:20px;
+h2{ font-size: 15px;
     color: rgb(88, 94, 94);
 }
 .authors{
@@ -54,6 +54,28 @@ h2{ font-size:20px;
     border-radius: 20px;
     background:rgb(208, 247, 238);
     padding: 10px;
+}
+.image{
+    width: 160px;
+    height: 176px;
+
+}
+.buttons{
+    display: flex;
+}
+.button-chanch{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgb(215, 218, 218); 
+    background-color: rgba(234, 254, 253, 0.955);
+}
+.button-delete{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgb(215, 218, 218); 
+    background-color: rgba(234, 254, 253, 0.955);
 }
 @media (max-width: 768px) {
     .middle{
@@ -65,18 +87,38 @@ h2{ font-size:20px;
     h1{
         font-size: 35px;
     }
+    .hat{
+        margin-left: auto;
+        margin-right: auto;
+    }
     .bookList {
         align-content: space-around;
         align-items: center;
+        justify-content: space-around;
         
     }
     
     .containerBook{
-        width: calc(100%/2);
-        margin-top: 20px;
+        width: calc(100%/3);
+        margin-top: 10px;
+        padding: 10px;
+        align-content: space-between;
+        justify-content: space-between;
+
     }
 
 
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    .containerBook{
+    max-width: 210px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    align-content: space-between;
+    justify-content: space-between;
+    }
+    .buttons{
+        justify-content: space-between;
+    }
 }
