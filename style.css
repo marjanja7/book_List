@@ -2,21 +2,77 @@
     width: 100%;
     height: 100%;
     background-color: rgba(234, 254, 253, 0.955);
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    
 }
+.photo-books{
+    background-image: url(photo-beautiful-woman-glasses-reading-pile.jpg);
+    height:600px;
+    width:100%;
+    background-size: cover;
+    opacity: 0.5;
+    
+}
+h1{
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 600px;
+    color: rgb(9, 10, 10);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 40px;
+    padding-top: 130px;
+}  
+.button-add-book{
+    font-size: 25px;
+    font-weight: 600;
+    width: 300px;
+    height: 70px;
+    border-radius: 5px;
+    border: 2px solid rgb(215, 218, 218); 
+    background-color: rgba(234, 254, 253, 0.955);
+}
+
 .middle{
     max-width: 1248px;
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .hat {
     
     text-align: center
-    
+
 }
-h1 {    
+.containerForm {
+    display: block;
+}
+input {
+    height: 25px;
+    width: 280px;
+    border-radius: 5px;
+}
+.input {
+    color: rgb(88, 94, 94);
+    background:rgb(208, 247, 238);
+    padding-left: 20px;
+    width: 300px;
+    height: 70px;
+}
+.p-input {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+.save-button {
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgb(88, 94, 94);
+    background-color:rgb(208, 247, 238);
+    margin: 20px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+h2 {    
     font-size: 50px;
     line-height: 1;
     font-weight: 600px;
@@ -46,7 +102,7 @@ h1 {
 
     
 }
-h2{ font-size: 15px;
+h3{ font-size: 15px;
     color: rgb(88, 94, 94);
 }
 .authors{
@@ -77,19 +133,27 @@ h2{ font-size: 15px;
     border: 2px solid rgb(215, 218, 218); 
     background-color: rgba(234, 254, 253, 0.955);
 }
+
 @media (max-width: 768px) {
     .middle{
         width: auto;
-        padding: 10px;
         margin-left: auto;
         margin-right: auto;
     }
     h1{
-        font-size: 35px;
+        font-size: 45px;
+        padding-left: 15px;
+        padding-top: 100px;
     }
-    .hat{
-        margin-left: auto;
-        margin-right: auto;
+    .photo-books {
+        height: 300px;
+        background-position: right;
+        background-size: cover;
+        
+    }
+    h2 {
+        font-size: 35px;
+
     }
     .bookList {
         align-content: space-around;
@@ -98,7 +162,7 @@ h2{ font-size: 15px;
         
     }
     
-    .containerBook{
+    .containerBook {
         width: calc(100%/3);
         margin-top: 10px;
         padding: 10px;
@@ -106,19 +170,32 @@ h2{ font-size: 15px;
         justify-content: space-between;
 
     }
+    .button-add-book {
+        height: 45px;
+        font-size: 18px;
+        width: auto;
+        margin-top: 40px;
+        margin-left: 15px;
 
-
+    }
 }
 @media (max-width: 600px) {
     .containerBook{
-    max-width: 210px;
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    align-content: space-between;
-    justify-content: space-between;
+        max-width: 210px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        align-content: space-between;
+        justify-content: space-between;
     }
     .buttons{
         justify-content: space-between;
+    }
+    h1 {
+        font-size: 35px;
+
+    }
+    .photo-books {
+        height: 250px;
     }
 }
