@@ -1,3 +1,16 @@
+const containerForm = document.getElementById ('container-form')
+const openFormButton = document.getElementById ('button-add-book')
+const closeFormButton = document.getElementById ('button-close')
+
+function openContainerForm () {
+  containerForm.style.display = 'flex'
+}
+function closeContainerForm () {
+  containerForm.style.display = 'none'
+}
+ openFormButton.addEventListener('click', openContainerForm )
+ closeFormButton.addEventListener('click', closeContainerForm)
+
 const books = [
     {
       id: 1,
@@ -29,10 +42,12 @@ const books = [
       year: 2011,
       image: './book4.jpg'
     }
-    ]
-    const containersBooks = document.getElementById("bookList")
-    function renderBooks(){
-      containersBooks.innerHTML =""
+  ] 
+
+  const containersBooks = document.getElementById("book-list")
+
+  function renderBooks(){
+    containersBooks.innerHTML =""
       books.forEach((book)=> {
         containersBooks.innerHTML += `
             <div class="containerBook">
@@ -47,19 +62,11 @@ const books = [
             </div>
             `
       })
-    }
-let isOpen = false
-function addBook () {
-const containerForm = document.getElementById('myContainerForm')
+  }
+const buttonAddBook = document.getElementById('button-add-book')
 
-    if (isOpen) {
-        containerForm.style.display = "none"
-        isOpen = false
-      } else {
-        containerForm.style.display = "block"
-          isOpen = true
-    }
-}
+buttonAddBook.addEventListener('click',addBook)
+
 function clearForm () {
     document.getElementById('name').value=""
     document.getElementById('authors').value=""
@@ -89,7 +96,13 @@ function saveBook() {
         image: imageValue
     }
     books.push(book)
-    renderBooks()
+    
+    renderBooks ()
     clearForm ()
+    closeContainerForm ()
 } 
+const buttonSaveBook = document.getElementById('button-save')
+buttonSaveBook.addEventListener('click', saveBook )
+
 renderBooks()
+

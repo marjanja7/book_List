@@ -11,33 +11,40 @@
   
     <div class="basis-grey">
       <div class="middle">
+        <div class="container-form" id="container-form">
+          <div class="container-form-content">
+            <p class="title-form">Добавить новую книгу</p>
+            <div class="input"> 
+              <p class="p-input">Название книги</p>
+              <input id="title">
+            </div>
+            <div class="input">
+              <p class="p-input">Автор книги</p>
+              <input id="authors">
+            </div>
+            <div class="input">
+              <p class="p-input">Год издания книги</p>
+              <input id="year">
+            </div>
+            <div class="input">
+              <p class="p-input">Ссылка на изображение</p>
+              <input id="image">
+            </div>
+            <div class="buttons-form">
+              <button class="button-save" id="button-save">Сохранить</button>
+              <button class="button-close" id="button-close">Закрыть</button>
+            </div>
+          </div>
+        </div>
         <div class="photo-books">
           <h1>Книжная лавка</h1>
-          <button class="button-add-book" onclick="addBook ()">Добавить книгу</button>
+          <button class="button-add-book" id="button-add-book">Добавить книгу</button>
         </div>
-        <div class="containerForm" id="myContainerForm">
-          <div class="input"> 
-            <p class="p-input">Название книги</p>
-            <input id="title"/>
-          </div>
-          <div class="input">
-            <p class="p-input">Автор книги</p>
-            <input id="authors">
-          </div>
-          <div class="input">
-            <p class="p-input">Год издания книги</p>
-            <input id="year">
-          </div>
-          <div class="input">
-            <p class="p-input">Ссылка на изображение</p>
-            <input id="image">
-          </div>
-          <button class="save-button" onclick="saveBook ()">Сохранить</button>
-        </div>
+        
         <div class="hat">
           <h2>Книжная полка</h2>
         </div>
-        <div class="bookList" id="bookList">
+        <div class="book-list" id="book-list">
         </div>
       </div> 
     </div>
