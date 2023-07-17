@@ -28,16 +28,14 @@ const books = [
     },
     {
       id: 3,
-      title:
-      'JavaScript Patterns: Build Better Applications with Coding and Design Patterns',
+      title: 'JavaScript Patterns: Build Better Applications with Coding and Design Patterns',
       authors: 'Stoyan Stefanov',
       year: 2008,
       image: './book3.jpg'
     },
     {
       id: 4,
-      title:
-      'JavaScript: The Definitive Guide: Activate Your Web Pages (Definitive Guides)',
+      title: 'JavaScript: The Definitive Guide: Activate Your Web Pages (Definitive Guides)',
       authors: 'David Flanagan',
       year: 2011,
       image: './book4.jpg'
@@ -65,13 +63,18 @@ const books = [
   }
 const buttonAddBook = document.getElementById('button-add-book')
 
-buttonAddBook.addEventListener('click',addBook)
+buttonAddBook.addEventListener('click', openContainerForm)
 
-function clearForm () {
-    document.getElementById('name').value=""
-    document.getElementById('authors').value=""
-    document.getElementById('year').value=""
-    document.getElementById('image').value=""
+function saveToLocalStorage () {
+    const booksJson = JSON.stringify(books)
+    localStorage.setItem('books', booksJson)
+}
+
+function clearForm() {
+    document.getElementById('title').value = ""
+    document.getElementById('authors').value = ""
+    document.getElementById('year').value = ""
+    document.getElementById('image').value = ""
 }
 function deleteBook(id) {
     const book = books.find((b) => {
@@ -80,7 +83,11 @@ function deleteBook(id) {
     const bookIndex = books.indexOf(book)
     books.splice(bookIndex, 1)
     renderBooks ()
+
+    const booksJson = JSON.stringify(books)
+    localStorage.setItem('books', booksJson)
 }
+const buttonSaveBook = document.getElementById('button-save')
 
 function saveBook() {
     const titleValue = document.getElementById('title').value
@@ -100,9 +107,17 @@ function saveBook() {
     renderBooks ()
     clearForm ()
     closeContainerForm ()
+
+    const booksJson = JSON.stringify(books)
+    localStorage.setItem('books', booksJson)
 } 
-const buttonSaveBook = document.getElementById('button-save')
+
 buttonSaveBook.addEventListener('click', saveBook )
+
+const booksJson = localStorage.getItem('books')
+if (booksJson) {
+  books = JSON.parse(booksJson)
+}
 
 renderBooks()
 
