@@ -13,6 +13,7 @@
       <div class="middle">
         <div class="container-form" id="container-form">
           <div class="container-form-content">
+            <p id="error-container"> ПОЖАЛУЙСТА, ЗАПОЛНИТЕ ВСЕ ПОЛЯ! </p>
             <p class="title-form">Добавить новую книгу</p>
             <div class="input"> 
               <p class="p-input">Название книги</p>
@@ -31,8 +32,8 @@
               <input id="image">
             </div>
             <div class="buttons-form">
-              <button class="button-save" id="button-save">Сохранить</button>
-              <button class="button-close" id="button-close">Закрыть</button>
+              <button class="button" id="button-save">Сохранить</button>
+              <button class="button" id="button-close">Закрыть</button>
             </div>
           </div>
         </div>
@@ -46,6 +47,28 @@
         </div>
         <div class="book-list" id="book-list">
         </div>
+        <div class="container-edit" id="container-edit">
+          <div class="container-form-content">
+            <p class="title-form">Редактировать книгу</p>
+            <div class="input"> 
+              <p class="p-input">Название книги</p>
+              <input id="update-title">
+            </div>
+            <div class="input">
+              <p class="p-input">Автор книги</p>
+              <input id="update-authors">
+            </div>
+            <div class="input">
+              <p class="p-input">Год издания книги</p>
+              <input id="update-year">
+            </div>
+            <div class="input">
+              <p class="p-input">Ссылка на изображение</p>
+              <input id="update-image">
+            </div>
+            <div class="buttons-form">
+              <button class="button" id="button-edit">Редактировать</button>
+              <button class="button" id="button-cancel">Отмена</button>
       </div> 
     </div>
 

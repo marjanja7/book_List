@@ -9,6 +9,7 @@
     height:600px;
     width:100%;
     background-size: cover;
+    opacity: 70%;
     
     
 }
@@ -45,7 +46,18 @@ h1{
 }
 .container-form {
     background-color: rgba(0, 0, 0, 0.376);
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.container-edit {
+    background-color: rgba(0, 0, 0, 0.376);
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -88,7 +100,7 @@ input {
     justify-content: space-between;
 
 }
-.button-save {
+.button {
     width: calc(100%/2);
     height: 40px;
     border-radius: 5px;
@@ -98,15 +110,11 @@ input {
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif ;
 }
-.button-close {
-    width: calc(100%/2);
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid rgb(86, 239, 203);
-    background-color: white;
-    margin: 20px;
-    font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif ;
+#error-container{
+    display: none;
+    color: crimson;
+    font-size: 25px;
+    font-weight: 700;
 }
 h2 {    
     font-size: 50px;
@@ -155,7 +163,7 @@ h3{ font-size: 15px;
 .buttons{
     display: flex;
 }
-.button-chanch{
+.button-change{
     width: 100px;
     height: 35px;
     border-radius: 5px;
