@@ -157,8 +157,8 @@ books.forEach((book) => {
 })
 
 
-const updateButton = document.getElementById('button-edit')
-updateButton.addEventListener('click', makeUpdate)
+let editButton = document.getElementById('button-edit')
+editButton.addEventListener('click', makeUpdate)
 
 
 function makeUpdate () {
@@ -177,7 +177,7 @@ function makeUpdate () {
   const book = books.find((b) => {
     return b.id === currentBookId
   })
-  const bookIndex = books.index0f(book)
+  const bookIndex = books.indexOf(book)
   books.splise(bookIndex, 1, editBook)
   renderBooks()
   saveToLocalStorage()

@@ -15,9 +15,10 @@
 }
 h1{
     font-size: 90px;
+    text-shadow: 7px 7px 7px  black;
     line-height: 1;
     font-weight: 600px;
-    color: rgb(9, 10, 10);
+    color: whitesmoke;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 40px;
     padding-top: 130px;
