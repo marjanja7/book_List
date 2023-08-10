@@ -151,6 +151,7 @@ closeEditButton.addEventListener('click', closeEditContainer)
 
 books.forEach((book) => {
   let openEditButton = document.getElementById(`buttonChange-${book.id}`)
+  openEditButton.removeEventListener('click', openEditContainer)
   openEditButton.addEventListener('click', () => {
     openEditContainer(book.id)
   })
@@ -178,7 +179,7 @@ function makeUpdate () {
     return b.id === currentBookId
   })
   const bookIndex = books.indexOf(book)
-  books.splise(bookIndex, 1, editBook)
+  books.splice(bookIndex, 1, editBook)
   renderBooks()
   saveToLocalStorage()
   closeEditContainer()
